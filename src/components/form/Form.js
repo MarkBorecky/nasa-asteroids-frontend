@@ -41,7 +41,7 @@ function Form(props) {
             <input type="date" value={start} onChange={handleStartChange} />
             <label htmlFor="new-todo-input" >FROM</label>
             <input type="date" value={end} onChange={handleEndChange} />
-            <button type="submit" className="btn btn__primary btn__lg" onClick={handleSubmit}>Search</button>
+            <button type="submit" onClick={handleSubmit}>Search</button>
         </form>
     )
 }

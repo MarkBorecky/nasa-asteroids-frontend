@@ -45,7 +45,7 @@ function App(props) {
         <Form fetchAsteroids={fetchAsteroids} />
         {err && <h2>{err}</h2>}
         {isLoading && <h2>Loading...</h2>}
-        <Results asteroids={asteroids} />
+        {!isLoading && <Results asteroids={asteroids} />}
       </header>
     </div>
   );

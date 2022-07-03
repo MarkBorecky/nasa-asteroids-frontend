@@ -1,5 +1,7 @@
 .asteroid {
-    border: 1px solid red;
     padding: 20px;
     margin: 10px;
+    box-shadow: 5px 5px hwb(220 12% 85%);
+    border: 1px solid hwb(220 12% 85%);
+    border-radius: 10px;
 }

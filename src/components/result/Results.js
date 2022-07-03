@@ -1,6 +1,5 @@
 import React from 'react';
 import Asteroid from '../asteroid/Asteroid';
-
 export default function Results({ asteroids }) {
 
     const asteroidList = asteroids.map(asteroid => (
@@ -12,9 +11,11 @@ export default function Results({ asteroids }) {
     ));
 
     return (
-        <div>
-            <h2>Results</h2>
-            {asteroidList}
+        <div className="containerFluid">
+            { asteroids.length > 0 && <h2>Results</h2>}
+            <div className="row">
+                {asteroidList}
+            </div>
         </div>
     )
 }
