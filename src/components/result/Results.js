@@ -4,6 +4,7 @@ export default function Results({ asteroids }) {
 
     const asteroidList = asteroids.map(asteroid => (
         <Asteroid
+            key={asteroid.id}
             id={asteroid.id}
             name={asteroid.name}
             date={asteroid.date}
