@@ -7,9 +7,7 @@ function Form(props) {
     const defaultValue = getDefaultDate()
 
     function getDefaultDate() {
-        const today = new Date();
-        const date = today.setDate(today.getDate());
-        return new Date(date).toISOString().split('T')[0]
+        return new Date().toISOString().split('T')[0]
     }
 
     function handleSubmit(e) {
@@ -36,11 +34,11 @@ function Form(props) {
 
     return (
         <form className="asteroidForm">
-            <h3 htmlFor="new-todo-input" className="">Asteroid Browser</h3>
-            <label htmlFor="new-todo-input" >FROM</label>
-            <input type="date" value={start} onChange={handleStartChange} />
-            <label htmlFor="new-todo-input" >FROM</label>
-            <input type="date" value={end} onChange={handleEndChange} />
+            <h3 className="">Asteroid Browser</h3>
+            <label htmlFor="start-date-input">FROM</label>
+            <input id="start" type="date" value={start} onChange={handleStartChange} />
+            <label htmlFor="end-date-input" >FROM</label>
+            <input id="end" type="date" value={end} onChange={handleEndChange} />
             <button type="submit" onClick={handleSubmit}>Search</button>
         </form>
     )
